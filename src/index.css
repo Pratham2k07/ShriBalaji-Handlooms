@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --color-primary: #8C2121; /* Earthy Teracotta/Maroon */
+  --color-primary-light: #B43D3D;
+  --color-secondary: #D4AF37; /* Traditional Gold */
+  --color-background: #FAF8F5; /* Soft Cream/Beige */
+  --color-surface: #FFFFFF;
+  --color-text-main: #2C2A29; /* Deep Charcoal */
+  --color-text-muted: #666360;
+  --color-border: #E5E0D8;
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Layout */
+  --max-width: 1200px;
+  --section-padding: 5rem 2rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(44, 42, 41, 0.05);
+  --shadow-md: 0 8px 24px rgba(44, 42, 41, 0.08);
+  --shadow-lg: 0 16px 48px rgba(44, 42, 41, 0.12);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  color: var(--color-text-main);
+  background-color: var(--color-background);
+  /* Optional: soft fabric texture overlay can be added here or via pseudo-element */
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* Typography utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; color: var(--color-primary); text-align: center; margin-bottom: 3rem; }
+h3 { font-size: 1.75rem; }
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-text-muted);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Container */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+.section-bg-alternate {
+  background-color: var(--color-surface);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+/* Common Components overrides */
+.image-placeholder {
+  background-color: var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-style: italic;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; margin-bottom: 2rem; }
+  :root {
+    --section-padding: 3rem 1.5rem;
+  }
+}

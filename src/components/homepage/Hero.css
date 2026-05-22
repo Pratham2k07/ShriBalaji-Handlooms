@@ -1,0 +1,63 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-background);
+  /* Placeholder for a beautiful fabric background image */
+  background-image: linear-gradient(rgba(250, 248, 245, 0.9), rgba(250, 248, 245, 0.9));
+  padding-top: 80px; /* Offset for navbar */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle, transparent 20%, rgba(140, 33, 33, 0.03) 100%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero h1 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-text-main);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: var(--color-text-muted);
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .hero-cta {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
