@@ -5,7 +5,8 @@ import {
   getDoc, 
   updateDoc, 
   arrayUnion, 
-  arrayRemove 
+  arrayRemove,
+  addDoc
 } from 'firebase/firestore';
 import { db } from './config';
 
@@ -78,3 +79,21 @@ export const getCart = async (userId) => {
     return { cart: null, error: error.message };
   }
 };
+
+/**
+ * Save a customer message from the contact form
+ */
+export const saveContactMessage = async (messageData) => {
+  try {
+    const messagesCollection = collection(db, 'messages');
+    await addDoc(messagesCollection, {
+      ...messageData,
+      createdAt: new Date(),
+      status: 'unread' // To manage messages in the future
+    });
+    return { success: true, error: null };
+  } catch (error) {
+    return { success: false, error: error.message };
+  }
+};
+
