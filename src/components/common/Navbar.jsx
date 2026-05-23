@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
         <div className="navbar-logo" onClick={() => scrollToSection('home')}>
-          Shree Balaji Handloom
+          Shri Balaji Handloom
         </div>
         
         <div className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>

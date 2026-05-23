@@ -18,10 +18,10 @@
 
 .history-image {
   height: 400px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  border: none;
 }
 
 @media (max-width: 768px) {

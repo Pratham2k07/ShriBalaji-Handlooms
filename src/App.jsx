@@ -7,6 +7,7 @@ import WhyUs from './components/why-us/WhyUs';
 import ContactUs from './components/contact-us/ContactUs';
 import LocateUs from './components/locate-us/LocateUs';
 import Footer from './components/common/Footer';
+import RevealOnScroll from './components/common/RevealOnScroll';
 
 function App() {
   return (
@@ -14,11 +15,11 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <OurHistory />
-        <Products />
-        <WhyUs />
-        <ContactUs />
-        <LocateUs />
+        <RevealOnScroll><OurHistory /></RevealOnScroll>
+        <RevealOnScroll><Products /></RevealOnScroll>
+        <RevealOnScroll><WhyUs /></RevealOnScroll>
+        <RevealOnScroll><ContactUs /></RevealOnScroll>
+        <RevealOnScroll><LocateUs /></RevealOnScroll>
       </main>
       <Footer />
     </>

@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-brand">
-          <h2>Shree Balaji Handloom</h2>
+          <h2>Shri Balaji Handloom</h2>
           <p>Premium home furnishing products combining traditional elegance with modern quality.</p>
         </div>
         
@@ -22,14 +22,14 @@ const Footer = () => {
 
         <div className="footer-contact">
           <h3>Contact Info</h3>
-          <p>Phone: +91 XXXXX XXXXX</p>
-          <p>Email: info@shreebalajihandloom.com</p>
+          <p>Phone: +91 9413879038</p>
+          <p>Email: shribalajihandlooms2003@gmail.com</p>
           <p>Address: [Your Full Address Here]</p>
         </div>
       </div>
       
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Shree Balaji Handloom. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Shri Balaji Handloom. All rights reserved.</p>
       </div>
     </footer>
   );

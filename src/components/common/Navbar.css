@@ -10,9 +10,11 @@
 }
 
 .navbar.scrolled {
-  background-color: var(--color-surface);
-  box-shadow: var(--shadow-sm);
-  padding: 1rem 0;
+  background-color: rgba(6, 26, 24, 0.85); /* Dark Ocean Green glass */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .navbar-container {
@@ -26,8 +28,13 @@
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-text-main);
   cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.navbar.scrolled .navbar-logo {
+  color: var(--color-primary);
 }
 
 .navbar-links {
@@ -40,10 +47,19 @@
   font-size: 0.95rem;
   cursor: pointer;
   position: relative;
+  color: var(--color-text-main);
   transition: color var(--transition-fast);
 }
 
+.navbar.scrolled .navbar-links li {
+  color: var(--color-text-main);
+}
+
 .navbar-links li:hover {
+  color: var(--color-primary);
+}
+
+.navbar.scrolled .navbar-links li:hover {
   color: var(--color-primary);
 }
 
@@ -58,14 +74,18 @@
   transition: width var(--transition-fast);
 }
 
-.navbar-links li:hover::after {
-  width: 100%;
+.navbar.scrolled .navbar-links li::after {
+  background-color: var(--color-primary);
 }
 
 .mobile-menu-btn {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
+  color: var(--color-text-main);
+}
+
+.navbar.scrolled .mobile-menu-btn {
   color: var(--color-primary);
 }
 
@@ -95,6 +115,11 @@
   .navbar-links li {
     padding: 1rem 2rem;
     border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-main);
+  }
+
+  .navbar-links li:hover {
+    color: var(--color-primary);
   }
 
   .navbar-links li::after {

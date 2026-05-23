@@ -1,28 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Colors */
-  --color-primary: #8C2121; /* Earthy Teracotta/Maroon */
-  --color-primary-light: #B43D3D;
-  --color-secondary: #D4AF37; /* Traditional Gold */
-  --color-background: #FAF8F5; /* Soft Cream/Beige */
-  --color-surface: #FFFFFF;
-  --color-text-main: #2C2A29; /* Deep Charcoal */
-  --color-text-muted: #666360;
-  --color-border: #E5E0D8;
+  /* Colors - Classic Gold and Black Palette */
+  --color-primary: #D4AF37; /* Gold */
+  --color-primary-light: #F3E5AB; /* Light Gold / Champagne */
+  --color-secondary: #C5A017; /* Darker Gold */
+  --color-accent: #1A1A1A; /* Very Dark Gray */
+  
+  --color-background: #0A0A0A; /* Almost Black */
+  --color-surface: #141414; /* Dark Gray for cards */
+  
+  --color-text-main: #F8F8F8; /* Off-White Text */
+  --color-text-muted: #A0A0A0; /* Muted Gray */
+  --color-border: #2A2A2A; /* Dark border */
   
   /* Typography */
-  --font-heading: 'Playfair Display', serif;
+  --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
   
   /* Layout */
   --max-width: 1200px;
-  --section-padding: 5rem 2rem;
+  --section-padding: 6rem 2rem;
   
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(44, 42, 41, 0.05);
-  --shadow-md: 0 8px 24px rgba(44, 42, 41, 0.08);
-  --shadow-lg: 0 16px 48px rgba(44, 42, 41, 0.12);
+  /* Shadows - Ultra soft & diffused */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.05);
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
   
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -40,27 +48,32 @@ html {
   font-family: var(--font-body);
   color: var(--color-text-main);
   background-color: var(--color-background);
-  /* Optional: soft fabric texture overlay can be added here or via pseudo-element */
 }
 
 body {
-  line-height: 1.6;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  background-color: var(--color-background);
+  /* Premium subtle dot pattern */
+  background-image: radial-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
 /* Typography utilities */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
   margin-bottom: 1rem;
+  letter-spacing: -0.5px;
 }
 
 h1 { font-size: 3.5rem; }
-h2 { font-size: 2.5rem; color: var(--color-primary); text-align: center; margin-bottom: 3rem; }
+h2 { font-size: 2.5rem; color: var(--color-primary); text-align: center; margin-bottom: 3.5rem; }
 h3 { font-size: 1.75rem; }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   color: var(--color-text-muted);
 }
 
@@ -91,25 +104,38 @@ ul {
 /* Buttons */
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 2rem;
+  font-family: var(--font-heading);
   font-weight: 500;
-  font-family: var(--font-body);
-  text-align: center;
-  border-radius: 4px;
-  cursor: pointer;
+  font-size: 1rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
   transition: all var(--transition-normal);
-  border: 2px solid transparent;
+  cursor: pointer;
+  border: none;
 }
 
 .btn-primary {
   background-color: var(--color-primary);
-  color: #fff;
+  color: #0A0A0A; /* Dark text */
 }
 
 .btn-primary:hover {
   background-color: var(--color-primary-light);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: #0A0A0A;
+  transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -125,20 +151,36 @@ ul {
 
 /* Common Components overrides */
 .image-placeholder {
-  background-color: var(--color-border);
+  background-color: var(--color-background);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-text-muted);
-  font-style: italic;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
   width: 100%;
   height: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
 }
 
 @media (max-width: 768px) {
   h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; margin-bottom: 2rem; }
+  h2 { font-size: 2rem; margin-bottom: 2.5rem; }
   :root {
-    --section-padding: 3rem 1.5rem;
+    --section-padding: 4rem 1.5rem;
   }
+}
+
+/* Reveal Animations */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

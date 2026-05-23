@@ -14,17 +14,17 @@ const ContactUs = () => {
             
             <div className="contact-info-item">
               <strong>Business Name:</strong>
-              <span>Shree Balaji Handloom</span>
+              <span>Shri Balaji Handloom</span>
             </div>
             
             <div className="contact-info-item">
               <strong>Phone:</strong>
-              <span>[Phone Number Placeholder]</span>
+              <span>9413879038</span>
             </div>
             
             <div className="contact-info-item">
               <strong>Email:</strong>
-              <span>[Email Placeholder]</span>
+              <span>shribalajihandlooms2003@gmail.com</span>
             </div>
             
             <div className="contact-info-item">

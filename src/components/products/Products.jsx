@@ -4,7 +4,7 @@ import './Products.css';
 const productsList = [
   { id: 1, name: 'Bedsheets', description: 'Premium cotton and silk blend bedsheets.' },
   { id: 2, name: 'Curtains', description: 'Elegant curtains to enhance your room aesthetic.' },
-  { id: 3, name: 'Cushion Covers', description: 'Handcrafted cushion covers with traditional motifs.' },
+  { id: 3, name: 'Sofas', description: 'Premium textiled sofas for elegant living spaces.' },
   { id: 4, name: 'Blankets', description: 'Soft, warm and luxurious blankets for cozy nights.' },
   { id: 5, name: 'Towels', description: 'Highly absorbent, plush towels for everyday use.' },
   { id: 6, name: 'Home Decor', description: 'Unique home furnishing items to complete your space.' }
