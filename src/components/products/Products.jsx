@@ -74,10 +74,29 @@ const productsList = [
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  // Prevent background scrolling when modal is open
+  // Prevent background scrolling and initialize Swiper
   useEffect(() => {
     if (selectedProduct) {
       document.body.style.overflow = 'hidden';
+      const timer = setTimeout(() => {
+        if (window.Swiper) {
+          new window.Swiper('.mySwiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            loop: true,
+            coverflowEffect: {
+              rotate: 0,
+              stretch: 0,
+              depth: 250,
+              modifier: 1,
+              slideShadows: true,
+            },
+          });
+        }
+      }, 50);
+      return () => clearTimeout(timer);
     } else {
       document.body.style.overflow = 'unset';
     }
@@ -109,31 +128,33 @@ const Products = () => {
         </div>
       </div>
 
-      {/* Modal Popup */}
+      {/* Cinematic Modal Popup */}
       {selectedProduct && (
-        <div className="product-modal-overlay" onClick={() => setSelectedProduct(null)}>
-          <div className="product-modal-content" onClick={e => e.stopPropagation()}>
+        <div className="cinematic-overlay" onClick={() => setSelectedProduct(null)}>
+          <div className="cinematic-modal" onClick={e => e.stopPropagation()}>
             <button 
-              className="product-modal-close" 
+              className="cinematic-close" 
               onClick={() => setSelectedProduct(null)}
               aria-label="Close"
             >
               &times;
             </button>
-            <div className="product-modal-header">
+            <div className="cinematic-header">
               <h3>{selectedProduct.name}</h3>
               <p>{selectedProduct.description}</p>
             </div>
             
-            <div className="product-modal-body">
-              <h4>Available Varieties</h4>
-              <div className="varieties-grid">
+            <div className="swiper mySwiper">
+              <div className="swiper-wrapper">
                 {selectedProduct.varieties.map((variety, index) => (
-                  <div key={index} className="variety-card">
-                    <div className="variety-image-container">
-                      <img src={variety.image} alt={variety.name} className="variety-image" />
+                  <div key={index} className="swiper-slide cinematic-slide">
+                    <div 
+                      className="cinematic-card-bg" 
+                      style={{ backgroundImage: `url(${variety.image})` }}
+                    ></div>
+                    <div className="cinematic-card-content">
+                      <h4 className="cinematic-variety-name">{variety.name}</h4>
                     </div>
-                    <p className="variety-name">{variety.name}</p>
                   </div>
                 ))}
               </div>
