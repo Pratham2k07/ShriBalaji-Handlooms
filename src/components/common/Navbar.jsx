@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import logo from '../../assets/logo.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +26,8 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
         <div className="navbar-logo" onClick={() => scrollToSection('home')}>
-          Shri Balaji Handloom
+          <img src={logo} alt="Shri Balaji Handlooms Logo" className="navbar-logo-img" />
+          <span className="navbar-brand-text">Shri Balaji Handloom</span>
         </div>
         
         <div className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>

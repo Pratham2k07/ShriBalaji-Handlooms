@@ -1,8 +1,7 @@
 .history-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .history-text h3 {
@@ -16,21 +15,8 @@
   line-height: 1.8;
 }
 
-.history-image {
-  height: 400px;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  border: none;
-}
-
 @media (max-width: 768px) {
   .history-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .history-image {
-    height: 300px;
+    padding: 0 1rem;
   }
 }

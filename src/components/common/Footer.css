@@ -22,7 +22,21 @@
 
 .footer-brand h2 {
   font-size: 1.8rem;
+  margin-bottom: 0;
+}
+
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   margin-bottom: 1rem;
+}
+
+.footer-logo-img {
+  height: 60px;
+  width: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .footer-links ul {

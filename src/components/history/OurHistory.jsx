@@ -19,11 +19,6 @@ const OurHistory = () => {
               Today, we specialize in complete home decor clothing solutions. From exquisite bedsheets to elegant curtains, stylish sofa covers, and every fabric required to elevate a home's aesthetic, we bring warmth and quality to your living spaces. As a proud family business, our values remain rooted in trust, excellence, and making your house feel more like a home.
             </p>
           </div>
-          <div className="history-image">
-            <div className="image-placeholder">
-              [Family Business / Store Heritage Image]
-            </div>
-          </div>
         </div>
       </div>
     </section>
