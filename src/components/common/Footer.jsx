@@ -28,7 +28,7 @@ const Footer = () => {
           <h3>Contact Info</h3>
           <p>Phone: +91 9413879038</p>
           <p>Email: shribalajihandlooms2003@gmail.com</p>
-          <p>Address: [Your Full Address Here]</p>
+          <p>Address: shop no :-117,Shree Talkies Road, opposite shiv mandir, Ajmer, Rajasthan 305001</p>
         </div>
       </div>
       

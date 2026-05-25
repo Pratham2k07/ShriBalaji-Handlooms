@@ -62,7 +62,7 @@ const ContactUs = () => {
             
             <div className="contact-info-item">
               <strong>Address:</strong>
-              <span>Shree Talkies Road, opposite shiv mandir, Ajmer, Rajasthan 305001</span>
+              <span>shop no :-117,Shree Talkies Road, opposite shiv mandir, Ajmer, Rajasthan 305001</span>
             </div>
 
             <div className="whatsapp-btn-container" style={{ marginTop: '2rem' }}>
