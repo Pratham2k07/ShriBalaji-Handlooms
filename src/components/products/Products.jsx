@@ -86,6 +86,11 @@ const Products = () => {
             centeredSlides: true,
             slidesPerView: 'auto',
             loop: true,
+            speed: 800,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
             coverflowEffect: {
               rotate: 0,
               stretch: 0,
@@ -158,6 +163,8 @@ const Products = () => {
                   </div>
                 ))}
               </div>
+              <div className="swiper-button-next cinematic-nav"></div>
+              <div className="swiper-button-prev cinematic-nav"></div>
             </div>
           </div>
         </div>
